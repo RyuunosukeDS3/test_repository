@@ -31,3 +31,4 @@ jobs:
         python -c 'import main; main.release_${{ github.event.inputs.release }}()'
       env:
         REPO_NAME: ${{ github.repository }}
+        TOKEN: ${{ secrets.TOKEN }}
