@@ -21,9 +21,10 @@ jobs:
     - name: Clonando Scorched CI
       run: |
         git clone https://github.com/ScorchedDevs/scorched-ci.git 
-        cd scorched-ci
     - name: Instalando dependencias
-      run: pip install -r requirements.txt
+      run: |
+        cd scorched-ci
+        pip install -r requirements.txt
     - name: Criando o release
       run: python -c 'import main; main.relase_${{ github.event.inputs.release }}()
       env:
