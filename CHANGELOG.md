@@ -2,7 +2,7 @@
 
 ## Novas funcionalidades
 
- - [#001] teste123
+ - [#1] teste123
 
 ## Melhorias
 
