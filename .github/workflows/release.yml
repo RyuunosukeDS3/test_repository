@@ -28,6 +28,6 @@ jobs:
     - name: Criando o release
       run: |
         cd scorched-ci
-        python -c 'import main; main.relase_${{ github.event.inputs.release }}()'
+        python -c 'import main; main.release_${{ github.event.inputs.release }}()'
       env:
         REPOSITORY_NAME: ${{ github.repository }}
