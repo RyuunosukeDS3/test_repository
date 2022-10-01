@@ -20,7 +20,9 @@ jobs:
     steps:
     - name: Clonando Scorched CI
       run: |
-        git clone https://github.com/ScorchedDevs/scorched-ci.git 
+        git clone https://github.com/ScorchedDevs/scorched-ci.git
+    - name: test
+      run: ls
     - name: Instalando dependencias
       run: |
         cd scorched-ci
