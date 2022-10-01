@@ -11,8 +11,10 @@
 
 ## Correções
 
- - N/A
+ - [[#1](https://github.com/RyuunosukeDS3/test_repository/issues/1)] teste123
+ - [[#1](https://github.com/RyuunosukeDS3/test_repository/issues/1)] teste123
+ - [[#1](https://github.com/RyuunosukeDS3/test_repository/issues/1)] teste123
 
 ## Quebra de compatibilidade
 
- - N/A
+ - [[#1](https://github.com/RyuunosukeDS3/test_repository/issues/1)] teste123
