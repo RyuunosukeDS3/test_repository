@@ -2,7 +2,7 @@
 
 ## Novas funcionalidades
 
- - N/A
+ - 123
 
 ## Melhorias
 
