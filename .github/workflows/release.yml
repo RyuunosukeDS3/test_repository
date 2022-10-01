@@ -30,4 +30,4 @@ jobs:
         cd scorched-ci
         python -c 'import main; main.release_${{ github.event.inputs.release }}()'
       env:
-        REPOSITORY_NAME: ${{ github.repository }}
+        REPO_NAME: ${{ github.repository }}
