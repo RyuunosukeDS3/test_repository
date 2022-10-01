@@ -1,0 +1,34 @@
+name: Mixed inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        type: choice
+        description: Tipo de Release
+        options: 
+        - major
+        - minor
+        - patch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]
+    steps:
+    - name: Clonando Scorched CI
+      run: |
+        git clone https://github.com/ScorchedDevs/scorched-ci.git
+    - name: Instalando dependencias
+      run: |
+        cd scorched-ci
+        pip install -r requirements.txt
+    - name: Criando o release
+      run: |
+        cd scorched-ci
+        python -c 'import main; main.release_${{ github.event.inputs.release }}()'
+      env:
+        REPO_NAME: ${{ github.repository }}
+        TOKEN: ${{ secrets.TOKEN }}
