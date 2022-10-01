@@ -26,6 +26,8 @@ jobs:
         cd scorched-ci
         pip install -r requirements.txt
     - name: Criando o release
-      run: python -c 'import main; main.relase_${{ github.event.inputs.release }}()'
+      run: |
+        cd scorched-ci
+        python -c 'import main; main.relase_${{ github.event.inputs.release }}()'
       env:
         REPOSITORY_NAME: ${{ github.repository }}
