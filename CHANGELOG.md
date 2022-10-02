@@ -2,7 +2,7 @@
 
 ## Novas funcionalidades
 
- - N/A
+ - adicionando test.yml
 
 ## Melhorias
 
