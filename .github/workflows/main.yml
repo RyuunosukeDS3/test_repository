@@ -12,6 +12,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: ${{ github.triggering_actor }} == ${{secrets.PROJECT_OWNER }}
     steps:
     - name: echo triggering
       run: echo ${{ github.triggering_actor }}
