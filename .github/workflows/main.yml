@@ -1,0 +1,19 @@
+name: Mixed inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        type: choice
+        description: Tipo de Release
+        options: 
+        - test
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo triggering
+      run: echo {{ github.triggering_actor }}
+    - name: echo owner
+      run: echo {{ github.repository_owner }}
