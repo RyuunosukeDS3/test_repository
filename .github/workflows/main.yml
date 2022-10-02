@@ -11,8 +11,8 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
     if: ${{ github.triggering_actor }} == $PROJECT_OWNER
+    runs-on: ubuntu-latest
     steps:
     - name: echo triggering
       run: echo ${{ github.triggering_actor }}
