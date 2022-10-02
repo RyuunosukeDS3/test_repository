@@ -1,0 +1,22 @@
+name: test
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        type: choice
+        description: Tipo de Release
+        options: 
+        - test
+
+jobs:
+  test:
+    if: ${{ github.triggering_actor == 'RyuunosukeDS3' && github.ref == 'develop' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo triggering
+      run: echo ${{ github.triggering_actor }}
+    - name: echo owner
+      run: echo ${{ github.repository_owner }}
+      env:
+        PROJECT_OWNER: ${{ secrets.PROJECT_OWNER }}
