@@ -1,4 +1,4 @@
-name: Mixed inputs
+name: test
 
 on:
   workflow_dispatch:
@@ -10,10 +10,10 @@ on:
         - test
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: echo triggering
-      run: echo {{ github.triggering_actor }}
+      run: echo ${{ github.triggering_actor }}
     - name: echo owner
-      run: echo {{ github.repository_owner }}
+      run: echo ${{ github.repository_owner }}
