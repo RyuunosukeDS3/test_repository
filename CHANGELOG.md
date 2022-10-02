@@ -2,7 +2,7 @@
 
 ## Novas funcionalidades
 
- - adicionando test.yml
+ - #3 - adicionado logs dos eventos
 
 ## Melhorias
 
