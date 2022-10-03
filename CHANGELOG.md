@@ -2,7 +2,7 @@
 
 ## Novas funcionalidades
 
- - #3 - adicionado logs dos eventos
+ - 123
 
 ## Melhorias
 
