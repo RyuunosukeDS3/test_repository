@@ -2,11 +2,11 @@
 
 ## Novas funcionalidades
 
- - N/A
+ - 234
 
 ## Melhorias
 
- - dfgsdfsdfh
+ - N/A
 
 ## Correções
 
