@@ -2,11 +2,11 @@
 
 ## Novas funcionalidades
 
- - 234
+ - N/A
 
 ## Melhorias
 
- - N/A
+ - 123123 123
 
 ## Correções
 
