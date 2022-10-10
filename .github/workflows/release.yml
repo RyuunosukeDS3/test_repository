@@ -11,6 +11,7 @@ on:
         - minor
         - patch
 
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -19,22 +20,8 @@ jobs:
         python-version: ["3.10"]
     if: github.ref == 'refs/heads/develop'
     steps:
-    - name: Clonando Scorched CI
-      run: |
-        git clone https://github.com/ScorchedDevs/scorched-ci.git
-        cd scorched-ci
-        git fetch --tags
-        latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
-        git checkout $latestTag
-        echo Running with Scorched-ci version $latestTag
-    - name: Instalando dependencias
-      run: |
-        cd scorched-ci
-        pip install -r requirements.txt
-    - name: Criando o release
-      run: |
-        cd scorched-ci
-        python -c 'import main; main.release_${{ github.event.inputs.release }}()'
+    - name: Scorched-CI-Release
+      uses: ScorchedDevs/scorched-ci@v1-4-0
       env:
         REPO_NAME: ${{ github.repository }}
         TOKEN: ${{ secrets.TOKEN }}
