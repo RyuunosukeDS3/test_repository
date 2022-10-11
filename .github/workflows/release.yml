@@ -1,11 +1,10 @@
-name: Mixed inputs
-
+name: Scorched-CI-Release
 on:
   workflow_dispatch:
     inputs:
       release:
         type: choice
-        description: Tipo de Release
+        description: Release Type
         options: 
         - major
         - minor
@@ -13,25 +12,29 @@ on:
 
 jobs:
   release:
+    if: ${{ github.ref == 'refs/heads/develop' }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ["3.10"]
-    if: github.ref == 'refs/heads/develop'
     steps:
-    - name: Clonando Scorched CI
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Clonning last Scorched CI version
       run: |
         git clone https://github.com/ScorchedDevs/scorched-ci.git
         cd scorched-ci
         git fetch --tags
         latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
         git checkout $latestTag
-        echo Running with Scorched-ci version $latestTag
-    - name: Instalando dependencias
+    - name: Installing dependencies
       run: |
         cd scorched-ci
         pip install -r requirements.txt
-    - name: Criando o release
+    - name: Creating the release
       run: |
         cd scorched-ci
         python -c 'import main; main.release_${{ github.event.inputs.release }}()'

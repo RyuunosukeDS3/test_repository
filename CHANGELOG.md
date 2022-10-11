@@ -1,17 +1,18 @@
 # Changelog
 
-## Novas funcionalidades
+## New Features
 
  - N/A
 
-## Melhorias
+## Enhancements
 
- - 123123 123
+ - enahcement
+ - sdgsdfg
 
-## Correções
+## Fixes
 
  - N/A
 
-## Quebra de compatibilidade
+## Compatibility Breaker
 
  - N/A
