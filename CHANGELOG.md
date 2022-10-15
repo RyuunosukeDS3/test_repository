@@ -2,7 +2,7 @@
 
 ## New Features
 
- - N/A
+ - sdfgsdfg
 
 ## Enhancements
 
@@ -10,7 +10,7 @@
 
 ## Fixes
 
- - sdfgsdfg
+ - N/A
 
 ## Compatibility Breaker
 
