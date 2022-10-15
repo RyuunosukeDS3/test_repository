@@ -2,16 +2,15 @@
 
 ## New Features
 
- - dsfasdfasdf
- - fdgsdfhsdsdfg
+ - N/A
 
 ## Enhancements
 
- - erwgwerg
+ - N/A
 
 ## Fixes
 
- - N/A
+ - asdfasdfasdf
 
 ## Compatibility Breaker
 
