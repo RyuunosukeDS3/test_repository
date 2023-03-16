@@ -10,12 +10,13 @@ on:
         - minor
         - patch
 
+
 jobs:
-  test:
+  docker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Read Docker Image Identifiers
         run: echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
       - name: test
-        run: echo ${{ env.IMAGE_REPOSITORY }}
