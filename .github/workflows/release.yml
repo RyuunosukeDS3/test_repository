@@ -20,3 +20,4 @@ jobs:
       - name: Read Docker Image Identifiers
         run: echo IMAGE_REPOSITORY=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
       - name: test
+        run: echo ${{ env.IMAGE_REPOSITORY }}
